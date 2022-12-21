@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingAyush  === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Admin Dashboard Panel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="logo.png" alt="">
+            </div>
+
+            <span class="logo_name">CodingAyush</span>
+        </div>
+
+        <div class="menu-items" id="menu-items">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+
+                <li><a href="#">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Users</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Products</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Analytics</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="link-name">Tables</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">Buttons</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-share"></i>
+                        <span class="link-name">Cards</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle" onclick="chngMode(this)">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <div class="left">
+                <div class="sidebar-toggle"></div>
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Search here...">
+                </div>
+            </div>
+            <div class="right">
+
+                <div id="fullscreen">
+                    <i class="uil uil-expand-arrows-alt"></i>
+                </div>
+                <div class="drk-btn" onclick="chngMode(this)">
+                    <i class="uil uil-moon mode-toggle" id="moonBtn"></i>
+                </div>
+                <img class="profile-settings" src="logo.png" alt="" onclick="openPopup()">
+                <div class="profile-popup" id="profile-card">
+                    <div class="card">
+                        <div class="profile-head">
+                            <img src="logo.png" alt="">
+                            <div class="profile-name">Coding Ayush</div>
+                            <div class="edit-icon">T</div>
+                        </div>
+                        <div class="profile-menu-items">
+                            <ul>
+                                <li>Edit Profile</li>
+                                <li>Add Product</li>
+                                <li>Manage Users</li>
+                                <li>Settings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+                <div class="cards">
+                    <div class="card card-primary">
+                        <div class="card-head">
+                            <i class="uil uil-university"></i>
+
+                            <span class="text">Revenue</span>
+                        </div>
+                        <span class="number">$50,120</span>
+                    </div>
+                    <div class="card card-success">
+                        <div class="card-head">
+                            <i class="uil uil-comments"></i>
+                            <span class="text">Sales</span>
+                        </div>
+                        <span class="number">$20,120</span>
+                    </div>
+                    <div class="card card-info">
+                        <div class="card-head">
+
+                            <i class="uil uil-share"></i>
+                            <span class="text">Purchase</span>
+                        </div>
+                        <span class="number">$25,250</span>
+                    </div>
+                    <div class="card card-warning">
+                        <div class="card-head">
+
+                            <i class="uil uil-share"></i>
+                            <span class="text">Total Orders</span>
+                        </div>
+                        <span class="number">$14,660</span>
+                    </div>
+                </div>
+
+
+                <!-- <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Likes</span>
+                        <span class="number">50,120</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Comments</span>
+                        <span class="number">20,120</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Share</span>
+                        <span class="number">10,120</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-head">
+                        <h3>Messages</h3><b>View All</b>
+                    </div>
+                    <div class="card-body">
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="">
+                            </div>
+                            <div class="right">
+                                <div class="name">
+                                    Aayush Pathak
+                                </div>
+                                <div class="time">
+                                    2 minutes ago
+                                </div>
+                                <div class="message">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas libero.
+                                    Dignissimos ratione vitae minima nihil totam officiis voluptas eius.
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="">
+                            </div>
+                            <div class="right">
+                                <div class="name">
+                                    Aayush Pathak
+                                </div>
+                                <div class="time">
+                                    2 minutes ago
+                                </div>
+                                <div class="message">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas libero.
+                                    Dignissimos ratione vitae minima nihil totam officiis voluptas eius.
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="">
+                            </div>
+                            <div class="right">
+                                <div class="name">
+                                    Aayush Pathak
+                                </div>
+                                <div class="time">
+                                    2 minutes ago
+                                </div>
+                                <div class="message">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas libero.
+                                    Dignissimos ratione vitae minima nihil totam officiis voluptas eius.
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+                                <div class="name">
+                                    Aayush Pathak
+                                </div>
+                                <div class="time">
+                                    2 minutes ago
+                                </div>
+                                <div class="message">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas libero.
+                                    Dignissimos ratione vitae minima nihil totam officiis voluptas eius.
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+                                <div class="name">
+                                    Aayush Pathak
+                                </div>
+                                <div class="time">
+                                    2 minutes ago
+                                </div>
+                                <div class="message">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, quas libero.
+                                    Dignissimos ratione vitae minima nihil totam officiis voluptas eius.
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-head">
+                        <h3 class="row"><i class="uil uil-clipboard-notes color-warning bg-primary"></i> To Do List</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="add-todo">
+                            <input type="text" placeholder="Add Your Task...">
+                            <button class="btn btn-primary">Add</button>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="list">
+                                <div class="left">
+                                    <div class="chkbx">
+                                        <div class="custom-check"></div>
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                    <p> Take a Meal for me</p>
+                                </div>
+
+                                <div class="remove-btn">
+                                <i class="uil uil-times-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-head">
+                        
+                        <h3 class="row"><i class="uil uil-bell color-warning bg-primary"></i>Notifications</h3><b>
+                            View All
+                        </b>
+                    </div>
+                    <div class="card-body">
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+
+                                <div class="name">
+                                    Event Today
+                                </div>
+                                <div class="close-btn"><i class="uil uil-times-circle"></i></div>
+                                <div class="message">
+                                    Just a reminder you have an Event Today...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+
+                                <div class="name">
+                                    Renew Hosting
+                                </div>
+                                <div class="close-btn"><i class="uil uil-times-circle"></i></div>
+                                <div class="message">
+                                    Your Hosting is Going to expire Tomorrow
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+
+                                <div class="name">
+                                    Incomplete Dashboard
+                                </div>
+                                <div class="close-btn"><i class="uil uil-times-circle"></i></div>
+                                <div class="message">
+                                    Your Dashboard is Incomplete try to complete it faster the deadline is coming soon
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages">
+                            <div class="left">
+                                <img src="logo.png" alt="" height="10px" width="10px">
+                            </div>
+                            <div class="right">
+
+                                <div class="name">
+                                    Event Today
+                                </div>
+                                <div class="close-btn"><i class="uil uil-times-circle"></i></div>
+                                <div class="message">
+                                    Just a reminder you have an Event Today...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Name</span>
+                        <span class="data-list">Prem Shahi</span>
+                        <span class="data-list">Deepa Chand</span>
+                        <span class="data-list">Manisha Chand</span>
+                        <span class="data-list">Pratima Shahi</span>
+                        <span class="data-list">Man Shahi</span>
+                        <span class="data-list">Ganesh Chand</span>
+                        <span class="data-list">Bikash Chand</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">premshahi@gmail.com</span>
+                        <span class="data-list">deepachand@gmail.com</span>
+                        <span class="data-list">prakashhai@gmail.com</span>
+                        <span class="data-list">manishachand@gmail.com</span>
+                        <span class="data-list">pratimashhai@gmail.com</span>
+                        <span class="data-list">manshahi@gmail.com</span>
+                        <span class="data-list">ganeshchand@gmail.com</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Joined</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-15</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Type</span>
+                        <span class="data-list">New</span>
+                        <span class="data-list">Member</span>
+                        <span class="data-list">Member</span>
+                        <span class="data-list">New</span>
+                        <span class="data-list">Member</span>
+                        <span class="data-list">New</span>
+                        <span class="data-list">Member</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
